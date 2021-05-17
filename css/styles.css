@@ -57,6 +57,20 @@ body {
   font-family: var(--main-font);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ============= COMPONENTS ============= */
 .suptitle {
   font-weight: 700;
@@ -94,7 +108,7 @@ body {
 .menu-link,
 .mail-link,
 .tel-link {
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .menu-item:not(:last-child) {
   margin-right: 50px;
@@ -157,6 +171,8 @@ body {
 /* ============= HERO STUDIO ============= */
 .hero-studio {
   background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-studio-container {
   display: flex;
@@ -166,8 +182,7 @@ body {
 
 .hero-title {
   box-sizing: content-box;
-  width: 696px;
-  margin-top: 200px;
+  max-width: 696px;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -178,7 +193,6 @@ body {
   color: #ffffff;
 }
 .modal-btn {
-  margin-bottom: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -280,10 +294,10 @@ body {
   margin-top: 30px;
 }
 .team-card {
-  display: flex;
-  flex-direction: column;
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
   background-color: #ffffff;
 }
 .team-list-title {
@@ -358,6 +372,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  padding-right: 10px;
 }
 .portfolio-list-title {
   font-weight: 700;
@@ -365,6 +380,7 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--main-font-color);
+  margin-bottom: 4px;
 }
 .portfolio-list-description {
   font-weight: 400;
@@ -378,11 +394,6 @@ body {
 /* ============= FOOTER ============= */
 .footer {
   background-color: var(--footer-bg-color);
-}
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -394,7 +405,6 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  margin-bottom: 20px;
 }
 .logo-footer-studio {
   font-family: var(--secondary-font);
@@ -403,6 +413,12 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+.address {
+  margin-top: 20px;
+}
+.address-list-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .address-list-item-link {
   font-weight: 400;
